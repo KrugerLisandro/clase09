@@ -46,24 +46,23 @@
 
     <main class="container tab-content">
         <section class="tab-pane login active mb-4" id="login" role="tabpanel" aria-labelledby="login-tab">
-            <form class="row">
-                <div class="col-12">
+            <form action="registro.php" method="POST" enctype="multipart/form-data" id="fmrRegistro">
+                <div class="row">
                     <h2>Iniciar Sesión</h2>
                     <div class="mb-3">
-                        <label for="exampleInputNombre" class="form-label"><span style="color: red;">*</span>
+                        <label for="exampleInputEmailLogin" class="form-label"><span style="color: red;">*</span>
                             Correo Electrónico</label>
-                        <input type="text" class="form-control" id="exampleInputNombre" aria-describedby="NombreHelp">
+                        <input type="text" name="correoLogin" class="form-control" id="exampleInputEmailLogin">
                     </div>
                     <div class="mb-3">
-                        <label for="exampleInputApellido" class="form-label"><span style="color: red;">*</span>
+                        <label for="exampleInputPasswordLogin" class="form-label"><span style="color: red;">*</span>
                             Contraseña</label>
-                        <input type="text" class="form-control" id="exampleInputApellido"
-                            aria-describedby="ApellidoHelp">
+                        <input type="password" name="passwordLogin" class="form-control" id="exampleInputPasswordLogin">
                     </div>
                     <div class="row mb-3">
                         <div class="col-6">
                             <div class="form-group custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="add-to-email-list" value="true">
+                                <input type="checkbox" class="custom-control-input" id="add-to-email-list">
                                 <label class="custom-control-label" for="add-to-email-list">Recordarme</label>
                             </div>
                         </div>
@@ -80,30 +79,25 @@
             </form>
         </section>
 
-
         <section class="tab-pane register active mb-4" id="register" role="tabpanel" aria-labelledby="register-tab">
-            <form class="row">
-                <div class="col-12">
+            <form action="registro.php" method="POST" enctype="multipart/form-data" id="fmrRegistro">
+                <div class="row">
                     <!--Primer formulario-->
                     <div class="col-lg-6 col-md-12">
                         <h2>Datos Personales</h2>
                         <div class="mb-3">
                             <label for="exampleInputNombre" class="form-label"><span style="color: red;">*</span>
                                 Nombre</label>
-                            <input type="text" class="form-control" id="exampleInputNombre"
-                                aria-describedby="NombreHelp">
+                            <input type="text" name="nombre" class="form-control" id="exampleInputNombre">
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputApellido" class="form-label"><span style="color: red;">*</span>
                                 Apellido</label>
-                            <input type="text" class="form-control" id="exampleInputApellido"
-                                aria-describedby="ApellidoHelp">
+                            <input type="text" name="apellido" class="form-control" id="exampleInputApellido">
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputNacimiento" class="form-label"><span style="color: red;">*</span>
-                                Fecha
-                                de
-                                Nacimiento</label>
+                                Fecha de Nacimiento</label>
                             <div class="row">
                                 <div class="col-4">
                                     <div class="form-group required">
@@ -235,8 +229,7 @@
                                 <div class="col-8">
                                     <label for="exampleInputNumerodeDocumento" class="form-label"><span
                                             style="color: red;">*</span> Número de Documento</label>
-                                    <input type="text" class="form-control" id="exampleInputNumerodeDocumento"
-                                        aria-describedby="NumerodeDocumentoHelp">
+                                    <input type="text" name="nroDocumento" class="form-control" id="exampleInputNumerodeDocumento">
                                 </div>
                             </div>
                         </div>
@@ -253,8 +246,7 @@
                         <div class="mb-3">
                             <label for="exampleInputTelefono" class="form-label"><span style="color: red;">*</span>
                                 Teléfono (cod. área + número)</label>
-                            <input type="number" class="form-control" id="exampleInputTelefono"
-                                aria-describedby="TelefonoHelp">
+                            <input type="number" name="telefono" class="form-control" id="exampleInputTelefono">
                         </div>
                     </div>
                     <!--Segundo Formulario-->
@@ -263,28 +255,24 @@
                         <div class="mb-3">
                             <label for="exampleInputEmail" class="form-label"><span style="color: red;">*</span>
                                 Email</label>
-                            <input type="email" class="form-control" id="exampleInputEmail"
-                                aria-describedby="EmailHelp">
+                            <input type="email" name="correoRegistre" class="form-control" id="exampleInputEmail">
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputConfirmarEmail" class="form-label"><span
                                     style="color: red;">*</span>
                                 Confirmar Email</label>
-                            <input type="email" class="form-control" id="exampleInputConfirmarEmail"
-                                aria-describedby="ConfirmarEmailHelp">
+                            <input type="email" name="correoRegistreConfirmacion" class="form-control" id="exampleInputConfirmarEmail">
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputContraseña" class="form-label"><span style="color: red;">*</span>
                                 Contraseña (mínimo 8 caracteres)</label>
-                            <input type="password" class="form-control" id="exampleInputContraseña"
-                                aria-describedby="ContraseñaHelp">
+                            <input type="password" name="passwordRegistre" class="form-control" id="exampleInputContraseña">
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputConfirmarContraseña" class="form-label"><span
                                     style="color: red;">*</span>
                                 Confirmar Contraseña</label>
-                            <input type="password" class="form-control" id="exampleInputConfirmarContraseña"
-                                aria-describedby="ConfirmarContraseñaHelp">
+                            <input type="password" name="passwordRegistreConfirmacion" class="form-control" id="exampleInputConfirmarContraseña">
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputConfirmarintereses" class="form-label"><span
@@ -366,7 +354,7 @@
                         </div>
                         <div class="row">
                             <div class="form-group custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="add-to-email-list" value="true">
+                                <input type="checkbox" class="custom-control-input" id="add-to-email-list">
                                 <label class="custom-control-label" for="add-to-email-list">Quiero recibir emails de
                                     promociones y noticias.
                                 </label>
